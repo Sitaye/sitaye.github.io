@@ -2,6 +2,11 @@ title: "San Zhang — Homepage"
 author_name: "San Zhang (张三)"
 lang: en
 
+# 出现在论文作者列表中的这些名字会自动加粗
+author_aliases:
+  - "San Zhang"
+  - "张三"
+
 exclude:
   - docs
   - vendor

@@ -68,10 +68,37 @@ h2 {
   font-weight: 600;
 }
 
-.pub-list { list-style: none; margin: 0; padding: 0; }
-.pub-list li { margin-bottom: 0.85rem; }
-.pub-list .links a { margin-left: 0.3rem; text-decoration: none; }
-.pub-list .links a:hover { text-decoration: underline; }
+.pub-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.pub-title {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.pub-authors, .pub-venue {
+  margin: 0.1rem 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+.pub-authors strong { color: #222; }
+
+.pub-summary {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+}
+
+.pub-links {
+  margin: 0.6rem 0 0;
+  font-size: 0.85rem;
+}
+.pub-links a { margin-right: 0.5rem; text-decoration: none; }
+.pub-links a:hover { text-decoration: underline; }
 
 @media (max-width: 640px) {
   .intro-cols { flex-direction: column-reverse; }

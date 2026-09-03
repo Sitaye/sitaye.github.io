@@ -1,19 +1,26 @@
 - year: 2025
-  authors: "San Zhang, Si Li, Wu Wang"
   title: "An Earlier Sample Paper"
+  authors: ["San Zhang", "Si Li", "Wu Wang"]
   venue: "ICML 2025"
+  summary: "占位论文简介：一两句话说明这篇论文做了什么、结果如何。验收通过后请替换为真实文案。"
+  links:
+    pdf: "https://example.com/paper3.pdf"
 
 - year: 2026
-  authors: "San Zhang, Si Li"
   title: "A Sample Paper About Things"
+  authors: ["San Zhang", "Si Li"]
   venue: "NeurIPS 2026 (preprint)"
+  summary: "占位论文简介第二篇。这段文字会显示在卡片内论文信息下方。"
   links:
+    project: "https://example.com/project"
     pdf: "https://example.com/paper.pdf"
     code: "https://github.com/example/repo"
 
 - year: 2025
-  authors: "San Zhang"
   title: "Another Sample Paper with Links"
+  authors: ["张三", "Li Si"]
   venue: "ICLR 2025"
+  summary: "占位论文简介第三篇——注意本条作者用中文名“张三”，验证中文别名同样自动加粗。"
   links:
+    project: "https://example.com/project2"
     pdf: "https://example.com/paper2.pdf"
