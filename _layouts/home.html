@@ -66,28 +66,6 @@
       {% endfor %}
     </section>
 
-    {% if site.data.services.size > 0 %}
-    <section class="services">
-      <h2>Services</h2>
-      <ul class="plain-list">
-        {% for s in site.data.services %}
-        <li>{{ s }}</li>
-        {% endfor %}
-      </ul>
-    </section>
-    {% endif %}
-
-    {% if site.data.friends.size > 0 %}
-    <section class="friends">
-      <h2>Friends</h2>
-      <div class="friends-grid">
-        {% for f in site.data.friends %}
-        <p class="friend"><a href="{{ f.url }}">{{ f.name }}</a><span class="friend-note"> — {{ f.note }}</span></p>
-        {% endfor %}
-      </div>
-    </section>
-    {% endif %}
-
     <footer class="footer">Last updated {{ site.time | date: "%B %Y" }} · {{ site.author_name }}</footer>
 
   </main>

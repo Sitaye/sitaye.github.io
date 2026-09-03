@@ -72,24 +72,14 @@ h2 {
 .contact-bar {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 1.25rem;
+  column-gap: 0.7rem;
   row-gap: 0.35rem;
   margin-top: 1.1rem;
   font-family: var(--sans);
   font-size: 0.9rem;
 }
 .contact-text { color: var(--ink); }
-
-.plain-list { margin: 0; padding-left: 1.2rem; }
-.plain-list li { margin-bottom: 0.3rem; }
-
-.friends-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  gap: 0.4rem 1.5rem;
-}
-.friend { margin: 0; }
-.friend-note { color: var(--ink-meta); font-size: 0.9rem; }
+.contact-sep { color: #aaa; }
 
 .news ul {
   list-style: none;
