@@ -69,5 +69,10 @@
     <footer class="footer">Last updated {{ site.time | date: "%B %Y" }} · {{ site.author_name }}</footer>
 
   </main>
+  <script>
+    document.querySelectorAll('.js-mail').forEach(function (el) {
+      el.href = 'mailto:' + el.dataset.mailUser + '@' + el.dataset.mailDomain;
+    });
+  </script>
 </body>
 </html>
