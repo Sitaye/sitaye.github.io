@@ -1,6 +1,7 @@
 title: "San Zhang — Homepage"
 author_name: "San Zhang (张三)"
 lang: en
+description: "Academic homepage of San Zhang (张三) — machine learning and systems research."
 
 # 出现在论文作者列表中的这些名字会自动加粗
 author_aliases:
