@@ -35,11 +35,13 @@
           <div class="pub-figure"><img src="{{ pub.figure | relative_url }}" alt=""></div>
           {%- endif -%}
           <div class="pub-body">
-            <h4 class="pub-title">
-              {%- if pub.venue -%}<span class="pub-venue-badge">{{ pub.venue }}</span>{%- endif -%}
-              {%- if pub.links.project -%}<a href="{{ pub.links.project }}">{{ pub.title }}</a>
-              {%- else -%}{{ pub.title }}{%- endif -%}
-            </h4>
+            <div class="pub-head">
+              <h4 class="pub-title">
+                {%- if pub.links.project -%}<a href="{{ pub.links.project }}">{{ pub.title }}</a>
+                {%- else -%}{{ pub.title }}{%- endif -%}
+              </h4>
+              {%- if pub.venue -%}<span class="pub-venue-tag">{{ pub.venue }}</span>{%- endif -%}
+            </div>
             <p class="pub-authors">
               {%- for a in pub.authors -%}
                 {%- assign me = false -%}

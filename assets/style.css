@@ -72,10 +72,7 @@ h2 {
   display: flex;
   gap: 1.25rem;
   align-items: flex-start;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 1rem 1.25rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .pub-figure { flex: 0 0 180px; }
@@ -88,23 +85,24 @@ h2 {
 
 .pub-body { flex: 1 1 auto; min-width: 0; }
 
+.pub-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
 .pub-title {
-  margin: 0 0 0.35rem;
+  margin: 0;
   font-size: 1.05rem;
   font-weight: 600;
 }
 
-.pub-venue-badge {
-  display: inline-block;
-  margin-right: 0.5rem;
-  padding: 0.08rem 0.55rem;
-  border: 1px solid #555;
-  border-radius: 999px;
-  font-size: 0.78rem;
-  font-weight: 500;
-  color: #444;
-  background: #f2f2f2;
-  vertical-align: 0.12em;
+.pub-venue-tag {
+  margin-left: auto;
+  font-size: 0.85rem;
+  color: #666;
   white-space: nowrap;
 }
 
