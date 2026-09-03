@@ -102,21 +102,8 @@ h2 {
 }
 
 .pub-card {
-  display: flex;
-  gap: 1.25rem;
-  align-items: flex-start;
   margin-bottom: 2rem;
 }
-
-.pub-figure { flex: 0 0 clamp(120px, 26%, 180px); }
-.pub-figure img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-}
-
-.pub-body { flex: 1 1 auto; min-width: 0; }
 
 .pub-title {
   margin: 0;
@@ -173,12 +160,10 @@ h2 {
 
 @media (max-width: 640px) {
   .intro-cols { flex-direction: column-reverse; }
-  .pub-card { gap: 0.9rem; }
 }
 
 @media print {
   .page { max-width: 100%; padding: 0; }
-  .pub-figure { display: none; }
   body { font-size: 11pt; }
   a { color: var(--ink); }
   .pub-card { margin-bottom: 1.1rem; break-inside: avoid; }

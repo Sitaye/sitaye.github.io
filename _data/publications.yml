@@ -7,7 +7,6 @@
   title: "An Earlier Sample Paper"
   authors: ["San Zhang", "Si Li", "Wu Wang"]
   venue: "ICML 2025"
-  figure: /assets/fig-placeholder.svg
   summary: "We revisit the problem of efficient attention approximation and show that a simple linear baseline matches transformer quality at half the inference cost."
   links:
     - label: "PDF"
@@ -17,7 +16,6 @@
   title: "Retrieval-Augmented Generation for Long-Horizon Language Agent Reliability: A Unified Framework"
   authors: ["San Zhang", "Si Li"]
   venue: "NeurIPS 2026 (preprint)"
-  figure: /assets/fig-placeholder.svg
   project: "https://example.com/project"
   summary: "This paper introduces a retrieval framework for tool-using agents, improving reliability on long-horizon tasks by 23% over prior work."
   links:
@@ -32,7 +30,6 @@
   title: "Another Sample Paper with Links"
   authors: ["San Zhang", "Li Si"]
   venue: "ICLR 2025"
-  figure: /assets/fig-placeholder.svg
   project: "https://example.com/project2"
   summary: "We study failure modes of multi-agent systems and contribute an open benchmark with diagnostic analysis. Title links to the project page."
   links:
