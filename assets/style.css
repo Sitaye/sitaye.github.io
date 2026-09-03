@@ -91,7 +91,6 @@ h2 {
 }
 .news li { display: contents; }
 .news time {
-  font-family: var(--sans);
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -130,6 +129,7 @@ h2 {
 
 .pub-venue-tag {
   font-family: var(--sans);
+  font-style: italic;
   font-size: 0.8rem;
   font-weight: 400;
   letter-spacing: 0.02em;
@@ -158,6 +158,7 @@ h2 {
   font-size: 0.8rem;
 }
 .pub-links a { color: var(--accent); }
+.pub-links-plain { color: var(--ink-meta); }
 
 .footer {
   margin-top: 3.5rem;
