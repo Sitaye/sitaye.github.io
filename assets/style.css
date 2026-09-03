@@ -69,11 +69,24 @@ h2 {
 }
 
 .pub-card {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 1rem 1.25rem;
   margin-bottom: 1rem;
 }
+
+.pub-figure { flex: 0 0 180px; }
+.pub-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.pub-body { flex: 1 1 auto; min-width: 0; }
 
 .pub-title {
   margin: 0 0 0.35rem;
@@ -81,7 +94,21 @@ h2 {
   font-weight: 600;
 }
 
-.pub-authors, .pub-venue {
+.pub-venue-badge {
+  display: inline-block;
+  margin-right: 0.5rem;
+  padding: 0.08rem 0.55rem;
+  border: 1px solid #555;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #444;
+  background: #f2f2f2;
+  vertical-align: 0.12em;
+  white-space: nowrap;
+}
+
+.pub-authors {
   margin: 0.1rem 0;
   font-size: 0.9rem;
   color: #555;
@@ -103,4 +130,6 @@ h2 {
 @media (max-width: 640px) {
   .intro-cols { flex-direction: column-reverse; }
   .portrait { flex: none; width: 180px; }
+  .pub-card { gap: 0.9rem; }
+  .pub-figure { flex-basis: 120px; }
 }

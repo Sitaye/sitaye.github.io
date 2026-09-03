@@ -31,25 +31,30 @@
       <h3 class="pub-year">{{ group.name }}</h3>
         {% for pub in group.items %}
         <article class="pub-card">
-          <h4 class="pub-title">
-            {%- if pub.links.project -%}<a href="{{ pub.links.project }}">{{ pub.title }}</a>
-            {%- else -%}{{ pub.title }}{%- endif -%}
-          </h4>
-          <p class="pub-authors">
-            {%- for a in pub.authors -%}
-              {%- assign me = false -%}
-              {%- for alias in site.author_aliases -%}{% if a == alias %}{% assign me = true %}{% endif %}{%- endfor -%}
-              {%- if me -%}<strong>{{ a }}</strong>{%- else -%}{{ a }}{%- endif -%}
-              {%- unless forloop.last %}, {% endunless -%}
-            {%- endfor -%}
-          </p>
-          <p class="pub-venue">{{ pub.venue }} · {{ pub.year }}</p>
-          {% if pub.summary %}<p class="pub-summary">{{ pub.summary }}</p>{% endif %}
-          <p class="pub-links">
-            {%- if pub.links.project %}<a href="{{ pub.links.project }}">[Project]</a> {% endif -%}
-            {%- if pub.links.pdf %}<a href="{{ pub.links.pdf }}">[PDF]</a> {% endif -%}
-            {%- if pub.links.code %}<a href="{{ pub.links.code }}">[Code]</a>{% endif -%}
-          </p>
+          {%- if pub.figure -%}
+          <div class="pub-figure"><img src="{{ pub.figure | relative_url }}" alt=""></div>
+          {%- endif -%}
+          <div class="pub-body">
+            <h4 class="pub-title">
+              {%- if pub.venue -%}<span class="pub-venue-badge">{{ pub.venue }}</span>{%- endif -%}
+              {%- if pub.links.project -%}<a href="{{ pub.links.project }}">{{ pub.title }}</a>
+              {%- else -%}{{ pub.title }}{%- endif -%}
+            </h4>
+            <p class="pub-authors">
+              {%- for a in pub.authors -%}
+                {%- assign me = false -%}
+                {%- for alias in site.author_aliases -%}{% if a == alias %}{% assign me = true %}{% endif %}{%- endfor -%}
+                {%- if me -%}<strong>{{ a }}</strong>{%- else -%}{{ a }}{%- endif -%}
+                {%- unless forloop.last %}, {% endunless -%}
+              {%- endfor -%}
+            </p>
+            {% if pub.summary %}<p class="pub-summary">{{ pub.summary }}</p>{% endif %}
+            <p class="pub-links">
+              {%- if pub.links.project %}<a href="{{ pub.links.project }}">[Project]</a> {% endif -%}
+              {%- if pub.links.pdf %}<a href="{{ pub.links.pdf }}">[PDF]</a> {% endif -%}
+              {%- if pub.links.code %}<a href="{{ pub.links.code }}">[Code]</a>{% endif -%}
+            </p>
+          </div>
         </article>
         {% endfor %}
       {% endfor %}
