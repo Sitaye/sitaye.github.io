@@ -1,0 +1,9 @@
+title: "San Zhang — Homepage"
+author_name: "San Zhang (张三)"
+lang: en
+
+exclude:
+  - docs
+  - vendor
+  - Gemfile
+  - Gemfile.lock

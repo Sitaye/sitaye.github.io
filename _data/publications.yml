@@ -1,0 +1,19 @@
+- year: 2025
+  authors: "San Zhang, Si Li, Wu Wang"
+  title: "An Earlier Sample Paper"
+  venue: "ICML 2025"
+
+- year: 2026
+  authors: "San Zhang, Si Li"
+  title: "A Sample Paper About Things"
+  venue: "NeurIPS 2026 (preprint)"
+  links:
+    pdf: "https://example.com/paper.pdf"
+    code: "https://github.com/example/repo"
+
+- year: 2025
+  authors: "San Zhang"
+  title: "Another Sample Paper with Links"
+  venue: "ICLR 2025"
+  links:
+    pdf: "https://example.com/paper2.pdf"

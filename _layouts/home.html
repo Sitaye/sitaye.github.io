@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+<body>
+  <main class="page">
+
+    <header class="intro">
+      <h1 class="name">{{ site.author_name }}</h1>
+      {{ content }}
+    </header>
+
+    <section class="news">
+      <h2>News</h2>
+      <ul>
+        {% assign news = site.data.news | sort: "date" | reverse %}
+        {% for item in news %}
+        <li><time>{{ item.date | date: "%Y-%m" }}</time> — {{ item.text }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section class="publications">
+      <h2>Publications</h2>
+      {% assign groups = site.data.publications | group_by: "year" | sort: "name" | reverse %}
+      {% for group in groups %}
+      <h3 class="pub-year">{{ group.name }}</h3>
+      <ul class="pub-list">
+        {% for pub in group.items %}
+        <li>
+          {{ pub.authors }}. <em>{{ pub.title }}</em>. {{ pub.venue }}
+          {%- if pub.links -%}
+            <span class="links">
+              {%- if pub.links.pdf %}<a href="{{ pub.links.pdf }}">[PDF]</a>{% endif -%}
+              {%- if pub.links.code %}<a href="{{ pub.links.code }}">[Code]</a>{% endif -%}
+            </span>
+          {%- endif -%}
+        </li>
+        {% endfor %}
+      </ul>
+      {% endfor %}
+    </section>
+
+  </main>
+</body>
+</html>
