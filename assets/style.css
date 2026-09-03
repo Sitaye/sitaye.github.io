@@ -69,12 +69,15 @@ h2 {
   border-radius: 8px;
 }
 
-.contact {
-  margin-top: 0.8rem;
+.contact-bar {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1.25rem;
+  row-gap: 0.35rem;
+  margin-top: 1.4rem;
   font-family: var(--sans);
   font-size: 0.9rem;
 }
-.contact p { margin: 0.25rem 0; }
 
 .news ul {
   list-style: none;
