@@ -78,6 +78,18 @@ h2 {
   font-family: var(--sans);
   font-size: 0.9rem;
 }
+.contact-text { color: var(--ink); }
+
+.plain-list { margin: 0; padding-left: 1.2rem; }
+.plain-list li { margin-bottom: 0.3rem; }
+
+.friends-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 0.4rem 1.5rem;
+}
+.friend { margin: 0; }
+.friend-note { color: var(--ink-meta); font-size: 0.9rem; }
 
 .news ul {
   list-style: none;

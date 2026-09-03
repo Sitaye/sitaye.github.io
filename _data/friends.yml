@@ -1,0 +1,11 @@
+- name: "Si Li"
+  note: "Labmate, Example University"
+  url: "https://example.org/~sili"
+
+- name: "Wu Wang"
+  note: "Collaborator, Another Example University"
+  url: "https://example.org/~wwang"
+
+- name: "Li Si"
+  note: "Undergraduate advisor, Example University"
+  url: "https://example.org/~lisi"
