@@ -3,7 +3,7 @@
   authors: ["San Zhang", "Si Li", "Wu Wang"]
   venue: "ICML 2025"
   figure: /assets/fig-placeholder.svg
-  summary: "Placeholder abstract: one or two sentences on what the paper does and what it shows. Replace with real copy."
+  summary: "We revisit the problem of efficient attention approximation and show that a simple linear baseline matches transformer quality at half the inference cost."
   links:
     - label: "PDF"
       url: "https://example.com/paper3.pdf"
@@ -14,7 +14,7 @@
   venue: "NeurIPS 2026 (preprint)"
   figure: /assets/fig-placeholder.svg
   project: "https://example.com/project"
-  summary: "Placeholder abstract for the second paper, shown below the author line inside the card."
+  summary: "This paper introduces a retrieval framework for tool-using agents, improving reliability on long-horizon tasks by 23% over prior work."
   links:
     - label: "arXiv"
       url: "https://arxiv.org/abs/0000.00000"
@@ -31,7 +31,7 @@
   venue: "ICLR 2025"
   figure: /assets/fig-placeholder.svg
   project: "https://example.com/project2"
-  summary: "Placeholder abstract for the third paper; the title links to its project page."
+  summary: "We study failure modes of multi-agent systems and contribute an open benchmark with diagnostic analysis. Title links to the project page."
   links:
     - label: "PDF"
       url: "https://example.com/paper2.pdf"
