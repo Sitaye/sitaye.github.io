@@ -1,6 +1,6 @@
 - date: 2026-06-01
-  text: "Sample news item C — 第三条示例新闻。"
+  text: "One paper got accepted somewhere; sample news item C."
 - date: 2026-08-15
-  text: "Sample news item A — 第一条示例新闻（日期最新，应排最前）。"
+  text: "Sample news item A — most recent, should sort first."
 - date: 2026-07-01
-  text: "Sample news item B — 第二条示例新闻。"
+  text: "Sample news item B — joined a research group as a summer intern."

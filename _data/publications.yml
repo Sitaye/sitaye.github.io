@@ -3,7 +3,7 @@
   authors: ["San Zhang", "Si Li", "Wu Wang"]
   venue: "ICML 2025"
   figure: /assets/fig-placeholder.svg
-  summary: "占位论文简介：一两句话说明这篇论文做了什么、结果如何。验收通过后请替换为真实文案。"
+  summary: "Placeholder abstract: one or two sentences on what the paper does and what it shows. Replace with real copy."
   links:
     - label: "PDF"
       url: "https://example.com/paper3.pdf"
@@ -14,7 +14,7 @@
   venue: "NeurIPS 2026 (preprint)"
   figure: /assets/fig-placeholder.svg
   project: "https://example.com/project"
-  summary: "占位论文简介第二篇。这段文字会显示在卡片内论文信息下方。"
+  summary: "Placeholder abstract for the second paper, shown below the author line inside the card."
   links:
     - label: "arXiv"
       url: "https://arxiv.org/abs/0000.00000"
@@ -27,11 +27,11 @@
 
 - year: 2025
   title: "Another Sample Paper with Links"
-  authors: ["张三", "Li Si"]
+  authors: ["San Zhang", "Li Si"]
   venue: "ICLR 2025"
   figure: /assets/fig-placeholder.svg
   project: "https://example.com/project2"
-  summary: "占位论文简介第三篇——注意本条作者用中文名“张三”，验证中文别名同样自动加粗。"
+  summary: "Placeholder abstract for the third paper; the title links to its project page."
   links:
     - label: "PDF"
       url: "https://example.com/paper2.pdf"

@@ -1,12 +1,11 @@
 title: "San Zhang — Homepage"
-author_name: "San Zhang (张三)"
+author_name: "San Zhang"
 lang: en
-description: "Academic homepage of San Zhang (张三) — machine learning and systems research."
+description: "Academic homepage of San Zhang — machine learning and systems research."
 
-# 出现在论文作者列表中的这些名字会自动加粗
+# Names to auto-bold in publication author lists; list every form you appear under
 author_aliases:
   - "San Zhang"
-  - "张三"
 
 exclude:
   - docs

@@ -8,14 +8,14 @@ html { -webkit-text-size-adjust: 100%; }
   --ink-soft: #555;
   --ink-meta: #6e6e6e;
   --rule: #ddd;
-  --sans: system-ui, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
 }
 
 body {
   margin: 0;
   background: #fff;
   color: var(--ink);
-  font-family: Georgia, "Times New Roman", "Songti SC", "SimSun", serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 16px;
   line-height: 1.65;
 }
