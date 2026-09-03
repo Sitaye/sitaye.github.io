@@ -9,7 +9,7 @@
       url: "https://example.com/paper3.pdf"
 
 - year: 2026
-  title: "A Sample Paper About Things"
+  title: "Retrieval-Augmented Generation for Long-Horizon Language Agent Reliability: A Unified Framework"
   authors: ["San Zhang", "Si Li"]
   venue: "NeurIPS 2026 (preprint)"
   figure: /assets/fig-placeholder.svg
