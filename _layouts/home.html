@@ -38,9 +38,11 @@
         {%- endif -%}
         <div class="pub-body">
           <h4 class="pub-title">
+            <span class="pub-title-text">
+              {%- if pub.project -%}<a href="{{ pub.project }}">{{ pub.title }}</a>
+              {%- else -%}{{ pub.title }}{%- endif -%}
+            </span>
             {%- if pub.venue -%}<span class="pub-venue-tag">{{ pub.venue }}</span>{%- endif -%}
-            {%- if pub.project -%}<a href="{{ pub.project }}">{{ pub.title }}</a>
-            {%- else -%}{{ pub.title }}{%- endif -%}
           </h4>
           <p class="pub-authors">
             {%- for a in pub.authors -%}
