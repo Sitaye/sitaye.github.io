@@ -1,3 +1,7 @@
+# Conventions:
+#   project: the paper's project page; makes the TITLE clickable (no [Project] badge)
+#   links:   artifacts only — usual labels: arXiv, PDF, Code, Dataset, Slides
+#            omit links entirely for papers with nothing public; the row disappears
 - year: 2025
   title: "An Earlier Sample Paper"
   authors: ["San Zhang", "Si Li", "Wu Wang"]
@@ -22,8 +26,6 @@
       url: "https://example.com/paper.pdf"
     - label: "Code"
       url: "https://github.com/example/repo"
-    - label: "Slides"
-      url: "https://example.com/slides.pdf"
 
 - year: 2025
   title: "Another Sample Paper with Links"
@@ -32,6 +34,3 @@
   figure: /assets/fig-placeholder.svg
   project: "https://example.com/project2"
   summary: "We study failure modes of multi-agent systems and contribute an open benchmark with diagnostic analysis. Title links to the project page."
-  links:
-    - label: "PDF"
-      url: "https://example.com/paper2.pdf"
