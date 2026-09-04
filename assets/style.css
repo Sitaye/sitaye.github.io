@@ -37,7 +37,6 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 /* line-level polish; silently ignored where unsupported */
 h1.name, h2, .pub-title-text { text-wrap: balance; }
-p, .news li > span { text-wrap: pretty; }
 
 h1.name {
   margin: 0 0 1.4rem;
@@ -84,36 +83,8 @@ h2 {
   font-size: 0.9rem;
 }
 .contact-entry { display: flex; column-gap: 0.7rem; }
-.contact-text { color: var(--ink); user-select: all; }
+.contact-text { color: var(--ink); font-family: var(--sans); user-select: all; }
 .contact-sep { color: var(--ink-faint); }
-
-.news ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  column-gap: 0.9rem;
-  row-gap: 0.4rem;
-  align-items: baseline;
-}
-.news li { display: contents; break-inside: avoid; }
-@supports (grid-template-columns: subgrid) {
-  .news li {
-    display: grid;
-    grid-column: 1 / -1;
-    grid-template-columns: subgrid;
-    align-items: baseline;
-  }
-}
-.news time {
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  text-align: right;
-  color: var(--ink-soft);
-  font-variant-numeric: lining-nums tabular-nums;
-}
 
 .pub-card {
   margin-bottom: 2rem;
