@@ -65,7 +65,7 @@ h2 {
 .bio { flex: 1 1 auto; min-width: 0; }
 .bio p:first-child { margin-top: 0; }
 
-.portrait { flex: 0 0 clamp(160px, 30%, 210px); }
+.portrait { flex: 0 0 clamp(150px, 27%, 190px); }
 .portrait img {
   display: block;
   width: 100%;
@@ -147,7 +147,7 @@ h2 {
 @media (max-width: 640px) {
   .intro-cols { flex-direction: column-reverse; }
   /* column direction turns flex-basis into height; pin the rail on width instead */
-  .portrait { flex: 0 0 auto; width: clamp(160px, 55%, 240px); }
+  .portrait { flex: 0 0 auto; width: clamp(150px, 50%, 210px); }
 }
 
 @media print {
