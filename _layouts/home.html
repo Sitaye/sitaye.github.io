@@ -8,6 +8,7 @@
   <meta property="og:title" content="{{ site.title }}">
   <meta property="og:description" content="{{ site.description }}">
   <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon.svg' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
 </head>
 <body>
@@ -23,7 +24,7 @@
       <ul>
         {% assign news = site.data.news | sort: "date" | reverse %}
         {% for item in news %}
-        <li><time>{{ item.date | date: "%Y-%m" }}</time><span>{{ item.text }}</span></li>
+        <li><time datetime="{{ item.date }}">{{ item.date | date: "%Y-%m" }}</time><span>{{ item.text }}</span></li>
         {% endfor %}
       </ul>
     </section>
@@ -33,13 +34,13 @@
       {% assign pubs = site.data.publications | sort: "year" | reverse %}
       {% for pub in pubs %}
       <article class="pub-card">
-        <h4 class="pub-title">
+        <h3 class="pub-title">
           <span class="pub-title-text">
             {%- if pub.project -%}<a href="{{ pub.project }}">{{ pub.title }}</a>
             {%- else -%}{{ pub.title }}{%- endif -%}
           </span>
           {%- if pub.venue -%}<span class="pub-venue-tag">{{ pub.venue }}</span>{%- endif -%}
-        </h4>
+        </h3>
         <p class="pub-authors">
           {%- for a in pub.authors -%}
             {%- assign me = false -%}
@@ -61,7 +62,7 @@
       {% endfor %}
     </section>
 
-    <footer class="footer">Last updated {{ site.time | date: "%B %Y" }} · {{ site.author_name }}</footer>
+    <footer class="footer">Last updated {% if site.last_updated %}{{ site.last_updated | date: "%B %Y" }}{% else %}{{ site.time | date: "%B %Y" }}{% endif %} · {{ site.author_name }}</footer>
 
   </main>
 </body>

@@ -8,16 +8,14 @@ html { -webkit-text-size-adjust: 100%; }
   --ink-soft: #555;
   --ink-meta: #6e6e6e;
   --rule: #ddd;
-  --serif: Georgia, "Times New Roman", serif;
   --sans: Arial, "Segoe UI", system-ui, sans-serif;
-  --text: var(--sans); /* revert to all-serif: set to var(--serif) */
 }
 
 body {
   margin: 0;
   background: #fff;
   color: var(--ink);
-  font-family: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 16px;
   line-height: 1.65;
 }
@@ -34,6 +32,10 @@ a {
 }
 a:hover { text-decoration: underline; }
 a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* line-level polish; silently ignored where unsupported */
+h1.name, h2, .pub-title-text { text-wrap: balance; }
+p, .news li > span { text-wrap: pretty; }
 
 h1.name {
   margin: 0 0 1.4rem;
@@ -80,7 +82,8 @@ h2 {
   font-family: var(--sans);
   font-size: 0.9rem;
 }
-.contact-text { color: var(--ink); }
+.contact-entry { display: flex; column-gap: 0.7rem; }
+.contact-text { color: var(--ink); user-select: all; }
 .contact-sep { color: #aaa; }
 
 .news ul {
@@ -93,14 +96,22 @@ h2 {
   row-gap: 0.4rem;
   align-items: baseline;
 }
-.news li { display: contents; }
+.news li { display: contents; break-inside: avoid; }
+@supports (grid-template-columns: subgrid) {
+  .news li {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: subgrid;
+    align-items: baseline;
+  }
+}
 .news time {
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.02em;
   text-align: right;
   color: var(--ink-soft);
-  font-variant-numeric: tabular-nums;
+  font-variant-numeric: lining-nums tabular-nums;
 }
 
 .pub-card {
@@ -162,6 +173,8 @@ h2 {
 
 @media (max-width: 640px) {
   .intro-cols { flex-direction: column-reverse; }
+  /* column direction turns flex-basis into height; pin the rail on width instead */
+  .portrait { flex: 0 0 auto; width: clamp(160px, 55%, 240px); }
 }
 
 @media print {

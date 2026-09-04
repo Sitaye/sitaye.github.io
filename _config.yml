@@ -1,11 +1,14 @@
-title: "San Zhang — Homepage"
-author_name: "San Zhang"
+title: "Penghan Lin"
+author_name: "Penghan Lin"
 lang: en
 description: "Academic homepage of San Zhang — machine learning and systems research."
 
 # Names to auto-bold in publication author lists; list every form you appear under
 author_aliases:
-  - "San Zhang"
+  - "Penghan Lin"
+
+# Set manually to the date (YYYY-MM-DD) content actually changed; only the month is shown
+last_updated: "2026-09-01"
 
 exclude:
   - docs
