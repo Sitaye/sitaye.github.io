@@ -8,14 +8,16 @@ html { -webkit-text-size-adjust: 100%; }
   --ink-soft: #555;
   --ink-meta: #6e6e6e;
   --rule: #ddd;
+  --serif: Georgia, "Times New Roman", serif;
   --sans: Arial, "Segoe UI", system-ui, sans-serif;
+  --text: var(--sans); /* revert to all-serif: set to var(--serif) */
 }
 
 body {
   margin: 0;
   background: #fff;
   color: var(--ink);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--text);
   font-size: 16px;
   line-height: 1.65;
 }
