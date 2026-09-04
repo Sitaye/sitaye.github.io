@@ -19,6 +19,7 @@
       {{ content }}
     </header>
 
+    {% if site.data.news %}
     <section class="news">
       <h2>News</h2>
       <ul>
@@ -28,7 +29,9 @@
         {% endfor %}
       </ul>
     </section>
+    {% endif %}
 
+    {% if site.data.publications %}
     <section class="publications">
       <h2>Publications</h2>
       {% assign pubs = site.data.publications | sort: "year" | reverse %}
@@ -61,6 +64,7 @@
       </article>
       {% endfor %}
     </section>
+    {% endif %}
 
     <footer class="footer">Last updated {% if site.last_updated %}{{ site.last_updated | date: "%B %Y" }}{% else %}{{ site.time | date: "%B %Y" }}{% endif %} · {{ site.author_name }}</footer>
 
