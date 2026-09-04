@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: 'en' }}">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title | default: site.title }}</title>
-  {%- if site.description %}
-  <meta name="description" content="{{ site.description }}">
-  <meta property="og:description" content="{{ site.description }}">
-  {% endif -%}
   <meta property="og:title" content="{{ site.title }}">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
@@ -67,7 +63,8 @@
     </section>
     {% endif %}
 
-    <footer class="footer">Last updated {% if site.last_updated %}{{ site.last_updated | date: "%B %Y" }}{% else %}{{ site.time | date: "%B %Y" }}{% endif %} · {{ site.author_name }}</footer>
+    {% assign updated = site.last_updated | default: site.time %}
+    <footer class="footer">Last updated: <time datetime="{{ updated | date: '%Y-%m' }}">{{ updated | date: "%B %Y" }}</time></footer>
 
   </main>
 </body>
