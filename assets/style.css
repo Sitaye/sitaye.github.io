@@ -7,6 +7,7 @@ html { -webkit-text-size-adjust: 100%; }
   --ink: #222;
   --ink-soft: #555;
   --ink-meta: #6e6e6e;
+  --ink-faint: #aaa;
   --rule: #ddd;
   --sans: Arial, "Segoe UI", system-ui, sans-serif;
 }
@@ -18,6 +19,7 @@ body {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 16px;
   line-height: 1.65;
+  overflow-wrap: break-word;
 }
 
 .page {
@@ -43,7 +45,6 @@ h1.name {
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.01em;
-  text-align: left;
 }
 
 h2 {
@@ -84,7 +85,7 @@ h2 {
 }
 .contact-entry { display: flex; column-gap: 0.7rem; }
 .contact-text { color: var(--ink); user-select: all; }
-.contact-sep { color: #aaa; }
+.contact-sep { color: var(--ink-faint); }
 
 .news ul {
   list-style: none;
