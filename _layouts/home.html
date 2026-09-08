@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title | default: site.title }}</title>
-  <meta property="og:title" content="{{ site.title }}">
+  <title>{{ site.author }}</title>
+  <meta property="og:title" content="{{ site.author }}">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
 </head>
@@ -12,21 +12,9 @@
   <main class="page">
 
     <header class="intro">
-      <h1 class="name">{{ site.author_name }}</h1>
+      <h1 class="name">{{ site.author }}</h1>
       {{ content }}
     </header>
-
-    {% if site.data.news %}
-    <section class="news">
-      <h2>News</h2>
-      <ul>
-        {% assign news = site.data.news | sort: "date" | reverse %}
-        {% for item in news %}
-        <li><time datetime="{{ item.date }}">{{ item.date | date: "%Y-%m" }}</time><span>{{ item.text }}</span></li>
-        {% endfor %}
-      </ul>
-    </section>
-    {% endif %}
 
     {% if site.data.publications %}
     <section class="publications">
@@ -43,9 +31,7 @@
         </h3>
         <p class="pub-authors">
           {%- for a in pub.authors -%}
-            {%- assign me = false -%}
-            {%- for alias in site.author_aliases -%}{% if a == alias %}{% assign me = true %}{% endif %}{%- endfor -%}
-            {%- if me -%}<strong>{{ a }}</strong>{%- else -%}{{ a }}{%- endif -%}
+            {% if a == site.author %}<strong>{{ a }}</strong>{%- else -%}{{ a }}{%- endif -%}
             {%- unless forloop.last %}, {% endunless -%}
           {%- endfor -%}
         </p>
@@ -63,8 +49,7 @@
     </section>
     {% endif %}
 
-    {% assign updated = site.last_updated | default: site.time %}
-    <footer class="footer">Last updated: <time datetime="{{ updated | date: '%Y-%m' }}">{{ updated | date: "%B %Y" }}</time></footer>
+    <footer class="footer">Last updated: <time datetime="{{ site.time | date: '%Y-%m' }}">{{ site.time | date: "%B %Y" }}</time></footer>
 
   </main>
 </body>

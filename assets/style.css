@@ -84,7 +84,7 @@ h2 {
   font-size: 0.9rem;
 }
 .contact-entry { display: flex; column-gap: 0.7rem; }
-.contact-text { color: var(--ink); user-select: all; }
+.contact-text { color: var(--ink); font-family: var(--sans); user-select: all; }
 .contact-sep { color: var(--ink-faint); }
 
 .pub-card {
