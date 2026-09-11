@@ -1,158 +1,204 @@
-* { box-sizing: border-box; }
+* {
+	box-sizing: border-box;
+}
 
-html { -webkit-text-size-adjust: 100%; }
+html {
+	-webkit-text-size-adjust: 100%;
+}
 
 :root {
-  --accent: #1f5fae;
-  --ink: #222;
-  --ink-soft: #555;
-  --ink-meta: #6e6e6e;
-  --ink-faint: #aaa;
-  --rule: #ddd;
-  --sans: Arial, "Segoe UI", system-ui, sans-serif;
+	--accent: #1f5fae;
+	--ink: #222;
+	--ink-soft: #555;
+	--ink-meta: #6e6e6e;
+	--ink-faint: #aaa;
+	--rule: #ddd;
+	--sans: Arial, "Segoe UI", system-ui, sans-serif;
 }
 
 body {
-  margin: 0;
-  background: #fff;
-  color: var(--ink);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 16px;
-  line-height: 1.65;
-  overflow-wrap: break-word;
+	margin: 0;
+	background: #fff;
+	color: var(--ink);
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 16px;
+	line-height: 1.65;
+	overflow-wrap: break-word;
 }
 
 .page {
-  max-width: 47rem;
-  margin: 0 auto;
-  padding: 2.5rem 1.25rem 4rem;
+	max-width: 47rem;
+	margin: 0 auto;
+	padding: 2.5rem 1.25rem 4rem;
 }
 
 a {
-  color: var(--accent);
-  text-decoration: none;
+	color: var(--accent);
+	text-decoration: none;
 }
-a:hover { text-decoration: underline; }
-a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+a:hover {
+	text-decoration: underline;
+}
+a:focus-visible {
+	outline: 2px solid var(--accent);
+	outline-offset: 2px;
+}
 
 /* line-level polish; silently ignored where unsupported */
-h1.name, h2, .pub-title-text { text-wrap: balance; }
+h1.name,
+h2,
+.pub-title-text {
+	text-wrap: balance;
+}
 
 h1.name {
-  margin: 0 0 1.4rem;
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.01em;
+	margin: 0 0 1.4rem;
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 1.15;
+	letter-spacing: -0.01em;
 }
 
 h2 {
-  margin: 2.4rem 0 0.8rem;
-  font-size: 1.25rem;
-  font-weight: 700;
-  line-height: 1.3;
-  letter-spacing: 0.04em;
-  padding-bottom: 0.3rem;
-  border-bottom: 1px solid var(--rule);
+	margin: 2.4rem 0 0.8rem;
+	font-size: 1.25rem;
+	font-weight: 700;
+	line-height: 1.3;
+	letter-spacing: 0.04em;
+	padding-bottom: 0.3rem;
+	border-bottom: 1px solid var(--rule);
 }
 
 .intro-cols {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
+	display: flex;
+	flex-direction: row-reverse; /* portrait first in DOM; bio lands left on desktop */
+	gap: 2rem;
+	align-items: flex-start;
 }
 
-.bio { flex: 1 1 auto; min-width: 0; }
-.bio p:first-child { margin-top: 0; }
+.bio {
+	flex: 1 1 auto;
+	min-width: 0;
+}
+.bio p:first-child {
+	margin-top: 0;
+}
 
-.portrait { flex: 0 0 clamp(150px, 27%, 190px); }
+.portrait {
+	flex: 0 0 clamp(150px, 27%, 190px);
+}
 .portrait img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
 }
 
-.contact { margin-top: 1.4rem; }
-.contact-lead { margin: 0 0 0.4rem; }
-.contact-bar {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 0.7rem;
-  row-gap: 0.35rem;
-  font-family: var(--sans);
-  font-size: 0.9rem;
+.contact {
+	margin-top: 1.4rem;
 }
-.contact-entry { display: flex; column-gap: 0.7rem; }
-.contact-text { color: var(--ink); font-family: var(--sans); user-select: all; }
-.contact-sep { color: var(--ink-faint); }
+.contact-lead {
+	margin: 0 0 0.4rem;
+}
+.contact-text {
+	color: var(--ink);
+	font-family: var(--sans);
+	user-select: all;
+}
+
+/* in-prose links need an underline; structured link rows stay color-only */
+.bio a {
+	text-decoration: underline;
+	text-underline-offset: 2px;
+}
 
 .pub-card {
-  margin-bottom: 2rem;
+	margin-bottom: 2rem;
 }
 
 .pub-title {
-  margin: 0;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  column-gap: 1rem;
-  align-items: first baseline;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1.3;
+	margin: 0;
+	display: grid;
+	grid-template-columns: 1fr auto;
+	column-gap: 1rem;
+	align-items: first baseline;
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 1.3;
 }
 
 .pub-venue-tag {
-  font-family: var(--sans);
-  font-style: italic;
-  font-size: 0.8rem;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  color: var(--ink-meta);
-  white-space: nowrap;
+	font-family: var(--sans);
+	font-style: italic;
+	font-size: 0.8rem;
+	font-weight: 400;
+	letter-spacing: 0.02em;
+	color: var(--ink-meta);
+	white-space: nowrap;
 }
 
 .pub-authors {
-  margin: 0.3rem 0 0;
-  font-size: 0.9rem;
-  color: var(--ink-soft);
+	margin: 0.3rem 0 0;
+	font-size: 0.9rem;
+	color: var(--ink-soft);
 }
-.pub-authors strong { color: var(--ink); }
+.pub-authors strong {
+	color: var(--ink);
+}
 
 .pub-summary {
-  margin: 0.6rem 0 0;
-  font-size: 0.9rem;
+	margin: 0.6rem 0 0;
+	font-size: 0.9rem;
 }
 
 .pub-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.625rem;
-  margin: 0.6rem 0 0;
-  font-family: var(--sans);
-  font-size: 0.8rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.625rem;
+	margin: 0.6rem 0 0;
+	font-family: var(--sans);
+	font-size: 0.8rem;
 }
-.pub-links a { color: var(--accent); }
-.pub-links-plain { color: var(--ink-meta); }
+.pub-links a {
+	color: var(--accent);
+}
+.pub-links-plain {
+	color: var(--ink-meta);
+}
 
 .footer {
-  margin-top: 3.5rem;
-  padding-top: 0.9rem;
-  border-top: 1px solid var(--rule);
-  font-family: var(--sans);
-  font-size: 0.8rem;
-  color: var(--ink-meta);
+	margin-top: 3.5rem;
+	padding-top: 0.9rem;
+	border-top: 1px solid var(--rule);
+	font-family: var(--sans);
+	font-size: 0.8rem;
+	color: var(--ink-meta);
 }
 
 @media (max-width: 640px) {
-  .intro-cols { flex-direction: column-reverse; }
-  /* column direction turns flex-basis into height; pin the rail on width instead */
-  .portrait { flex: 0 0 auto; width: clamp(150px, 50%, 210px); }
+	.intro-cols {
+		flex-direction: column;
+	}
+	/* column direction turns flex-basis into height; pin the rail on width instead */
+	.portrait {
+		flex: 0 0 auto;
+		width: clamp(150px, 50%, 210px);
+	}
 }
 
 @media print {
-  .page { max-width: 100%; padding: 0; }
-  body { font-size: 11pt; }
-  a { color: var(--ink); }
-  .pub-card { margin-bottom: 1.1rem; break-inside: avoid; }
+	.page {
+		max-width: 100%;
+		padding: 0;
+	}
+	body {
+		font-size: 11pt;
+	}
+	a {
+		color: var(--ink);
+	}
+	.pub-card {
+		margin-bottom: 1.1rem;
+		break-inside: avoid;
+	}
 }
