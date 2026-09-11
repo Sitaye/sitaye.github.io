@@ -71,7 +71,6 @@ h2 {
 
 .intro-cols {
 	display: flex;
-	flex-direction: row-reverse; /* portrait first in DOM; bio lands left on desktop */
 	gap: 2rem;
 	align-items: flex-start;
 }
@@ -177,7 +176,7 @@ h2 {
 
 @media (max-width: 640px) {
 	.intro-cols {
-		flex-direction: column;
+		flex-direction: column-reverse;
 	}
 	/* column direction turns flex-basis into height; pin the rail on width instead */
 	.portrait {
